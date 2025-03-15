@@ -1,0 +1,121 @@
+﻿@model ABCUniversity.Models.Db.Registration
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Registration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CandidateFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandidateFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandidateLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandidateLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pic)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.pic)" alt="No Photo" width="150"height="150" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowCreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowCreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+    <button>@Html.ActionLink("Downlad as PDF", "ConvertToPDF")</button>
+    @Html.ActionLink("GeneratePDF", "GeneratePDF", "Registrations") |
+
+    @Html.ActionLink("SendEmail", "SendEmail") |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RegistrationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

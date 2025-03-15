@@ -1,0 +1,20 @@
+﻿body {
+    font-family: 'Bebas Neue', cursive;
+}
+
+table {
+    font-family: 'Bebas Neue', cursive;
+    background-color: white;
+}
+
+th {
+    font-family: 'Bebas Neue', cursive;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+

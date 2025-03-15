@@ -1,0 +1,107 @@
+﻿@model IEnumerable<ABCUniversity.Models.Db.Registration>
+
+@{
+    ViewBag.Title = "Candidate Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/style.css" rel="stylesheet" />
+<h2>Candidate Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-condensed table-striped table-hover sortable">
+    <div class="table-responsive">
+
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PerMarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RowCreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerMarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                <img src="@Url.Content(item.pic)" alt="No Photo"width="150"height="150" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowCreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.ActionLink("Update Status", "Edit", new { id = item.RegistrationID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.RegistrationID })
+                |            @Html.ActionLink("Delete", "Delete", new { id = item.RegistrationID })
+            </td>
+        </tr>
+    }
+    </div>
+</table>
+
+ 
